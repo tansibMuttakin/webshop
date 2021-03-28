@@ -31,23 +31,7 @@
         <![endif]-->
     <!-- header start -->
     <!--Notification Section-->
-    <div class="notification-section notification-section-padding  notification-img ptb-10">
-        <div class="container-fluid">
-            <div class="notification-wrapper">
-                <div class="notification-pera-graph">
-                    <p>Get A big Discount for Gadgets. 10% to 70% Discount for all products. Save money</p>
-                </div>
-                <div class="notification-btn-close">
-                    <div class="notification-btn">
-                        <a href="#">Shop Now</a>
-                    </div>
-                    <div class="notification-close notification-icon">
-                        <button><i class="pe-7s-close"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <header>
         <div class="header-top-wrapper-2 border-bottom-2">
             <div class="header-info-wrapper pl-200 pr-200">
@@ -59,29 +43,28 @@
                 </div>
                 <div class="electronics-login-register">
                     <ul>
-                        <li><a data-toggle="modal" data-target="#exampleCompare" href="#"><i class="pe-7s-repeat"></i>Compare</a></li>
                         <li><a href="#"><i class="pe-7s-flag"></i>US</a></li>
-                                                @auth
-                        <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="pe-7s-users"></i>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                        @auth
+                            <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        <i class="pe-7s-users"></i>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                        </li>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                            </li>
                         @else
-                        <li><a href="{{route('login')}}"><i class="pe-7s-users"></i>My Account</a></li>
+                            <li><a href="{{route('login')}}"><i class="pe-7s-users"></i>My Account</a></li>
                         @endauth
                     </ul>
                 </div>
@@ -99,13 +82,7 @@
                         <div class="select-wrapper">
                             <select class="select">
                                 <option value="">All Categories</option>
-                                <option value="">Smartphones </option>
-                                <option value="">Computers</option>
-                                <option value="">Laptops </option>
-                                <option value="">Camerea </option>
-                                <option value="">Watches</option>
-                                <option value="">Lights </option>
-                                <option value="">Air conditioner</option>
+                                <option value="">looping categories </option>
                             </select>
                         </div>
                     </div>
@@ -148,13 +125,6 @@
                                         <li><a href="index-fashion-2.html">Fashion style 2</a></li>
                                         <li><a href="index-fruits.html">Fruits</a></li>
                                         <li><a href="index-book.html">book</a></li>
-                                        <li><a href="index-electronics.html">electronics</a></li>
-                                        <li><a href="index-electronics-2.html">electronics style 2</a></li>
-                                        <li><a href="index-food.html">food & drink</a></li>
-                                        <li><a href="index-furniture.html">furniture</a></li>
-                                        <li><a href="index-handicraft.html">handicraft</a></li>
-                                        <li><a href="index-smart-watch.html">smart watch</a></li>
-                                        <li><a href="index-sports.html">sports</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">pages</a>
@@ -177,25 +147,6 @@
                                         <li><a href="shop-grid-box.html">grid box style</a></li>
                                         <li><a href="shop-list-1-col.html"> list 1 column</a></li>
                                         <li><a href="shop-list-2-col.html">list 2 column</a></li>
-                                        <li><a href="shop-list-box.html">list box style</a></li>
-                                        <li><a href="product-details.html">tab style 1</a></li>
-                                        <li><a href="product-details-2.html">tab style 2</a></li>
-                                        <li><a href="product-details-3.html"> tab style 3</a></li>
-                                        <li><a href="product-details-4.html">sticky style</a></li>
-                                        <li><a href="product-details-5.html">sticky style 2</a></li>
-                                        <li><a href="product-details-6.html">gallery style</a></li>
-                                        <li><a href="product-details-7.html">gallery style 2</a></li>
-                                        <li><a href="product-details-8.html">fixed image style</a></li>
-                                        <li><a href="product-details-9.html">fixed image style 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">BLOG</a>
-                                    <ul>
-                                        <li><a href="blog.html">blog 3 colunm</a></li>
-                                        <li><a href="blog-2-col.html">blog 2 colunm</a></li>
-                                        <li><a href="blog-sidebar.html">blog sidebar</a></li>
-                                        <li><a href="blog-details.html">blog details</a></li>
-                                        <li><a href="blog-details-sidebar.html">blog details 2</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact.html"> Contact  </a></li>
@@ -340,7 +291,6 @@
                             <nav>
                                 <ul>
                                     <li><a href="#">Privacy Policy </a></li>
-                                    <li><a href="blog.html"> Blog</a></li>
                                     <li><a href="#">Help Center</a></li>
                                 </ul>
                             </nav>
